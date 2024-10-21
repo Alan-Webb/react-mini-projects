@@ -74,11 +74,17 @@ function Menu() {
 			<h2>Our Menu</h2>
 
 			{numPizzas > 0 ? (
-				<ul className="pizzas">
-					{pizzas.map((pizza) => (
-						<Pizza pizzaObj={pizza} key={pizza.name} />
-					))}
-				</ul>
+				<>
+					<p>
+						Authentic italian cuisine. 6 creative dishes to choose form. All
+						from our stone oven, all organic, all delicious.
+					</p>
+					<ul className="pizzas">
+						{pizzas.map((pizza) => (
+							<Pizza pizzaObj={pizza} key={pizza.name} />
+						))}
+					</ul>
+				</>
 			) : (
 				<p>No menu yet. Sob sniffle!! Come back later.</p>
 			)}
@@ -87,7 +93,7 @@ function Menu() {
 }
 
 function Pizza({pizzaObj}) {
-	if (pizzaObj.soldOut) return null;
+	// if (pizzaObj.soldOut) return null;
 
 	return (
 		<li className="pizza">
