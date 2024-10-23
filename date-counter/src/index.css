@@ -6,10 +6,13 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	display: flex;
-	/* align-items: center; */
+	align-items: center;
 	justify-content: center;
 	height: 100vh;
 	overflow: hidden;
+	text-align: center;
+	font-weight: bold;
+	background-color: burlywood;
 }
 
 code {
@@ -17,4 +20,11 @@ code {
 		monospace;
 }
 
-
+button {
+	padding: 0.5rem 1rem;
+	margin: 1rem;
+	font-weight: bold;
+	font-size: 2rem;
+	background-color: rgb(95, 16, 16);
+	color: #fff;
+}
