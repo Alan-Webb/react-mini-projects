@@ -97,7 +97,7 @@ function PackingList({items, onDeleteItem, onToggleItem}) {
 
 function Item({item, onDeleteItem, onToggleItem}) {
 	return (
-		<li>
+		<li> 
 			<input
 				type="checkbox"
 				value={item.packed}
