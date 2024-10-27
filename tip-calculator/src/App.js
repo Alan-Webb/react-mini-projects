@@ -1,4 +1,5 @@
 import "./styles.css";
+import {useState} from "react";
 
 export default function App() {
 	return (
@@ -9,9 +10,11 @@ export default function App() {
 }
 
 function TipCalculator() {
+	const [bill, setBill] = useState("");
+
 	return (
 		<div>
-			<BillInput />
+			<BillInput bill={bill} onSetBill={setBill} />
 			How did you like the service?
 			<SelectPercentage />
 			How did your friend like the service?
@@ -22,11 +25,16 @@ function TipCalculator() {
 	);
 }
 
-function BillInput() {
+function BillInput(bill, onSetBill) {
 	return (
 		<div>
 			<label>How much was the bill?</label>
-			<input type="text" placeholder="Bill value" />
+			<input
+				type="text"
+				placeholder="Bill value"
+				value={bill}
+				onChange={(e) => onSetBill(Number(e.target.value))}
+			/>
 		</div>
 	);
 }
