@@ -1,3 +1,6 @@
+import BackgroundHeading from "./BackgroundHeading";
+// import Footer from "./Footer";
+
 export default function App() {
 	return (
 		<div className="flex justify-center items-center font-sans bg-[#f1d4b3] min-h-screen">
@@ -10,12 +13,7 @@ export default function App() {
 				<section className="col-[2/3] row-[2/3] bg-[#fffcf9] border-l border-black/[0.08]"></section>
 			</main>
 
-			{/* <footer className="flex justify-between w-[972px] items-center text-[11px] opacity-30 mt-[12px]">
-				<small className="text-[11px]">&copy; 2024 Alan Webb</small>
-				<p>
-					Version <b>1.5</b>
-				</p>
-			</footer> */}
+			{/* <Footer /> */}
 		</div>
 	);
 }
