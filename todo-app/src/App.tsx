@@ -1,3 +1,7 @@
 export default function App() {
-	return <h1 className="text-4xl">Test</h1>;
+	return (
+		<div className="font-sans">
+			<h1 className="text-4xl">Test</h1>
+		</div>
+	);
 }
