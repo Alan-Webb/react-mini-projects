@@ -1,6 +1,7 @@
 import BackgroundHeading from "./BackgroundHeading";
 import Footer from "./Footer";
 import Header from "./Header";
+import TodoList from "./TodoList";
 
 export default function App() {
 	return (
@@ -8,10 +9,9 @@ export default function App() {
 			<BackgroundHeading />
 
 			<main className="relative w-[972px] h-[636px] bg-white rounded-[8px] shadow-[0_4px_4px_rgba(0,0,0,0.08)] grid grid-cols-[7fr_4fr] grid-rows-[59px_1fr] overflow-hidden">
-				<Header/>
-				
+				<Header />
 
-				<ul></ul>
+				<TodoList />
 
 				<section className="col-[2/3] row-[2/3] bg-[#fffcf9] border-l border-black/[0.08]"></section>
 			</main>
