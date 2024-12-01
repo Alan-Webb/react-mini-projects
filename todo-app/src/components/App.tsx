@@ -2,6 +2,7 @@ import BackgroundHeading from "./BackgroundHeading";
 import Footer from "./Footer";
 import Header from "./Header";
 import TodoList from "./TodoList";
+import SideBar from "./SideBar";
 
 export default function App() {
 	return (
@@ -13,7 +14,7 @@ export default function App() {
 
 				<TodoList />
 
-				<section className="col-[2/3] row-[2/3] bg-[#fffcf9] border-l border-black/[0.08]"></section>
+				<SideBar />
 			</main>
 
 			<Footer />
