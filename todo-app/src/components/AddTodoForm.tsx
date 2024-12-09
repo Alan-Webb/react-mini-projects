@@ -6,7 +6,9 @@ export default function AddTodoForm() {
 				type="text"
 				className="h-[45px] border border-black/[12] rounded-[5px] my-[9px] text-[14px] block w-full"
 			/>
-			<button type="submit">Add to list</button>
+			<button type="submit" className="h-[45px] bg-[#473a2b] w-full text-white">
+				Add to list
+			</button>
 		</form>
 	);
 }
