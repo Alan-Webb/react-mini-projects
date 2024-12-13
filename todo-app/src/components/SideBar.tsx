@@ -8,7 +8,7 @@ export default function SideBar() {
 
 			<div className="mt-auto space-y-2">
 				<Button buttonType="secondary"/>
-				<Button buttonType="secondary"/>
+				<Button buttonType="secondary"/> 
 			</div>
 		</section>
 	);
