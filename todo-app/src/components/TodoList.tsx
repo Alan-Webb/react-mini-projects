@@ -1,12 +1,21 @@
-const initialTodos = ["buy groceries", "Walk the dog", "Do laundry"];
+import DeleteButton from "./DeleteButton";
+
+const initialTodos = [
+	"buy groceries",
+	"Walk the dog",
+	"Do laundry",
+	"Study for exam",
+];
 
 export default function TodoList() {
 	return (
 		<ul>
 			{initialTodos.map((todo) => (
-				<li className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]">
+				<li
+					key={todo}
+					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]">
 					<span>{todo}</span>
-					<button>❌</button>
+					<DeleteButton />
 				</li>
 			))}
 		</ul>
