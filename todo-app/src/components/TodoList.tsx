@@ -1,10 +1,9 @@
 import DeleteButton from "./DeleteButton";
 
 const initialTodos = [
-	"buy groceries",
-	"Walk the dog",
-	"Do laundry",
-	"Study for exam",
+	{text: "buy groceries", isCompleted: false},
+	{text: "Do laundry", isCompleted: true},
+	{text: "Exercise", isCompleted: false},
 ];
 
 export default function TodoList() {
@@ -12,9 +11,9 @@ export default function TodoList() {
 		<ul>
 			{initialTodos.map((todo) => (
 				<li
-					key={todo}
+					key={todo.text}
 					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]">
-					<span>{todo}</span>
+					<span className="line-through text-[#ccc]">{todo.text}</span>
 					<DeleteButton />
 				</li>
 			))}
