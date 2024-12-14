@@ -13,7 +13,10 @@ export default function TodoList() {
 				<li
 					key={todo.text}
 					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]">
-					<span className="line-through text-[#ccc]">{todo.text}</span>
+					<span
+						className={`${todo.isCompleted ? "line-through text-[#ccc]" : ""}`}>
+						{todo.text}
+					</span>
 					<DeleteButton />
 				</li>
 			))}
