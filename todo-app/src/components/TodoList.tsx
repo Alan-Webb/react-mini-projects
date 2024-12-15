@@ -2,10 +2,10 @@ import {useState} from "react";
 import DeleteButton from "./DeleteButton";
 
 export default function TodoList() {
-	const [todos, setTodo] = useState([
-		{text: "buy groceries", isCompleted: false},
-		{text: "Do laundry", isCompleted: true},
-		{text: "Exercise", isCompleted: false},
+	const [todos, setTodos] = useState([
+		{id: 1, text: "buy groceries", isCompleted: false},
+		{id: 2, text: "Do laundry", isCompleted: true},
+		{id: 3, text: "Exercise", isCompleted: false},
 	]);
 
 	return (
