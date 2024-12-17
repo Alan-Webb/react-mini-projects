@@ -13,7 +13,17 @@ export default function TodoList() {
 			{todos.map((todo) => (
 				<li
 					key={todo.text}
-					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]">
+					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]"
+					onClick={() => {
+						setTodos(
+							todos.map((todo) => {
+								return {
+									...todo,
+									isCompleted: true,
+								};
+							})
+						);
+					}}>
 					<span
 						className={`${todo.isCompleted ? "line-through text-[#ccc]" : ""}`}>
 						{todo.text}
