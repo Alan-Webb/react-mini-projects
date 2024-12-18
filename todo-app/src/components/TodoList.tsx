@@ -12,7 +12,7 @@ export default function TodoList() {
 		<ul>
 			{todos.map((todo) => (
 				<li
-					key={todo.text}
+					key={todo.id}
 					className="flex justify-between items-center px-8 h-[50px] text-[14px] cursor-pointer border-b border-black/[8%]"
 					onClick={() => {
 						setTodos(
