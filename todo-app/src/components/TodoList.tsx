@@ -28,7 +28,7 @@ export default function TodoList() {
 						className={`${todo.isCompleted ? "line-through text-[#ccc]" : ""}`}>
 						{todo.text}
 					</span>
-					<DeleteButton />
+					<button>❌</button>
 				</li>
 			))}
 		</ul>
