@@ -1,8 +1,8 @@
-export default function DeleteButton() {
+export default function DeleteButton({setTodos}) {
 	return (
 		<button
 			onClick={() => {
-				setTodos(todos.filter((t) => t.id !== todo.id));
+				setTodos((prev) => prev.filter((todo) => todo.id !== todo.id));
 			}}>
 			❌
 		</button>

@@ -1,5 +1,5 @@
 import {useState} from "react";
-// import DeleteButton from "./DeleteButton";
+import DeleteButton from "./DeleteButton";
 
 export default function TodoList() {
 	const [todos, setTodos] = useState([
@@ -18,12 +18,8 @@ export default function TodoList() {
 						className={`${todo.isCompleted ? "line-through text-[#ccc]" : ""}`}>
 						{todo.text}
 					</span>
-					<button
-						onClick={() => {
-							setTodos(todos.filter((t) => t.id !== todo.id));
-						}}>
-						❌
-					</button>
+
+					<DeleteButton setTodos={setTodos} />
 				</li>
 			))}
 		</ul>
