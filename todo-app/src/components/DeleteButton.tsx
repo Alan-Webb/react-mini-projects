@@ -1,5 +1,10 @@
 export default function DeleteButton() {
-  return (
-    <button>❌</button>
-  )
+	return (
+		<button
+			onClick={() => {
+				setTodos(todos.filter((t) => t.id !== todo.id));
+			}}>
+			❌
+		</button>
+	);
 }

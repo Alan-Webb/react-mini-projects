@@ -4,8 +4,8 @@ import {useState} from "react";
 export default function TodoList() {
 	const [todos, setTodos] = useState([
 		{id: 1, text: "buy groceries", isCompleted: false},
-		{id: 2, text: "Do laundry", isCompleted: true},
-		{id: 3, text: "Exercise", isCompleted: false},
+		{id: 2, text: "do laundry", isCompleted: true},
+		{id: 3, text: "exercise", isCompleted: false},
 	]);
 
 	return (
@@ -20,7 +20,7 @@ export default function TodoList() {
 					</span>
 					<button
 						onClick={() => {
-							setTodos([]);
+							setTodos(todos.filter((t) => t.id !== todo.id));
 						}}>
 						❌
 					</button>
