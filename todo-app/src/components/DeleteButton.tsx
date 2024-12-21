@@ -1,4 +1,4 @@
-export default function DeleteButton({setTodos}) {
+export default function DeleteButton({id, setTodos}) {
 	return (
 		<button
 			onClick={() => {

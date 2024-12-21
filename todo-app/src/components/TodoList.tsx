@@ -19,7 +19,7 @@ export default function TodoList() {
 						{todo.text}
 					</span>
 
-					<DeleteButton setTodos={setTodos} />
+					<DeleteButton id={todo.id} setTodos={setTodos} />
 				</li>
 			))}
 		</ul>
