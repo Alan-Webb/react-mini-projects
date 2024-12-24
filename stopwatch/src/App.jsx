@@ -18,26 +18,30 @@ export default function App() {
 	}, [running]);
 
 	return (
-		<>
-			<h1>Stopwatch</h1>
-			<div>
+		<div className="max-w-md flex flex-col items-center justify-center py-8">
+			<h1 className="text-2xl font-semibold pb-2">Stopwatch</h1>
+			<div className="text-xl font-semibold">
 				<span>{"0" + Math.floor((time / 60000) % 60)}:</span>
 				<span>{"0" + Math.floor((time / 1000) % 60)}:</span>
 				<span>{"0" + ((time / 10) % 100)}</span>
 			</div>
 			<div>
-				<button
-					onClick={() => {
-						setRunning(true);
-					}}>
-					Start
-				</button>
-				<button
-					onClick={() => {
-						setRunning(false);
-					}}>
-					Stop
-				</button>
+				{running ? (
+					<button
+						onClick={() => {
+							setRunning(false);
+						}}>
+						Stop
+					</button>
+				) : (
+					<button
+						onClick={() => {
+							setRunning(true);
+						}}>
+						Start
+					</button>
+				)}
+
 				<button
 					onClick={() => {
 						setTime(0);
@@ -45,6 +49,6 @@ export default function App() {
 					Reset
 				</button>
 			</div>
-		</>
+		</div>
 	);
 }
