@@ -1,5 +1,10 @@
-import "./App.css";
+import Input from "./components/Input";
 
 export default function App() {
-	return <>Test</>;
+	return (
+		<>
+			<h1>Todo Board</h1>
+			<Input />
+		</>
+	);
 }
