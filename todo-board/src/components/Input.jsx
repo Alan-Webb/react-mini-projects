@@ -10,15 +10,19 @@ export default function Input({taskList, setTaskList}) {
 
 	return (
 		<>
-			<form>
+			<form className="flex flex-row items-center gap-3">
 				<input
-					className="border rounded px-2"
+					className="border rounded-lg py-1.5 px-2.5 text-lg"
 					type="text"
 					placeholder="Add a task"
 					value={input}
 					onChange={(e) => setInput(e.target.value)}
 				/>
-				<button onClick={handleAddTask}>Add</button>
+				<button
+					className="bg-violet-200 text-white py-2 px-3.5 rounded-lg font-semibold hover:opacity-70"
+					onClick={handleAddTask}>
+					Add
+				</button>
 			</form>
 		</>
 	);
