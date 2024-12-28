@@ -13,7 +13,7 @@ export default function App() {
 			</div>
 			<div>
 				{taskList.map((task, index) => (
-					<Board/>>
+					<Board key={index} task={task} />
 				))}
 			</div>
 		</>
