@@ -2,7 +2,9 @@ import Book from "./Book";
 
 export default function BookList() {
 	return (
-		<section>
+		<section className="booklist">
+			<Book />
+			<Book />
 			<Book />
 			<Book />
 			<Book />
