@@ -1,3 +1,3 @@
 export default function Image() {
-	return <img src="./src/assets/zombie-survival.jpg" alt="zombie survival handbook"/>;
+	return <img src="./src/images/book-1.jpg" alt="zombie survival handbook" />;
 }
