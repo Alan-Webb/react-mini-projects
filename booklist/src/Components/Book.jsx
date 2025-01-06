@@ -1,9 +1,10 @@
-export default function Book(props) {
+export default function Book({img, title, author, children}) {
 	return (
 		<article>
-			<img src={props.img} alt={props.title} />
-			<h2>{props.title}</h2>
-			<h4>{props.author}</h4>
+			<img src={img} alt={title} />
+			<h2>{title}</h2>
+			<h4>{author}</h4>
+			{children}
 		</article>
 	);
 }
