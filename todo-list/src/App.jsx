@@ -6,7 +6,6 @@ export default function App() {
 	return (
 		<>
 			<TodoList></TodoList>
-			<TodoItem></TodoItem>
 		</>
 	);
 }

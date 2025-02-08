@@ -24,11 +24,13 @@ h1 {
 	text-align: center;
 	margin-top: 0;
 }
+
 .list-items {
 	min-height: 150px;
 	max-height: 300px;
 	overflow-y: scroll;
 }
+
 .list-input {
 	display: flex;
 	flex-direction: row-reverse;
