@@ -1,9 +1,17 @@
-import React from "react";
+import {useState} from "react";
 
 const TaskForm = () => {
+	const [description, setDescription] = useState("");
+	setDescription("random task");
+
 	return (
 		<form>
-			<input type="text" placeholder="Task Description" required />
+			<input
+				value={description}
+				type="text"
+				placeholder="Task Description"
+				required
+			/>
 			<input type="date" required />
 			<select>
 				<option value="low">Low</option>
@@ -18,4 +26,5 @@ const TaskForm = () => {
 		</form>
 	);
 };
+
 export default TaskForm;

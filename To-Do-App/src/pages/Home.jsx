@@ -1,12 +1,12 @@
 import React from "react";
 import "./Home.css";
-import TaskForm from "/src/components/TaskForm.jsx"
+import TaskForm from "/src/components/TaskForm.jsx";
 
 function Home() {
 	return (
 		<div className="app">
 			<h1>To-Do List</h1>
-      <TaskForm/>
+			<TaskForm></TaskForm>
 			<div className="filters">
 				<label>
 					Completion:
