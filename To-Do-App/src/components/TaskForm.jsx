@@ -1,16 +1,18 @@
 import {useState} from "react";
 
 const TaskForm = () => {
-	const [description, setDescription] = useState("");
-	setDescription("random task");
+	const [description, setDescription] = useState("Random Task");
 
 	return (
 		<form>
 			<input
-				value={description}
 				type="text"
 				placeholder="Task Description"
 				required
+				value={description}
+				onChange={(e) => {
+					setDescription(e.target.value);
+				}}
 			/>
 			<input type="date" required />
 			<select>
