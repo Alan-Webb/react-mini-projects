@@ -15,6 +15,7 @@ const TaskForm = () => {
 			priority,
 			completed,
 		};
+		console.log(newTask);
 	};
 
 	return (
