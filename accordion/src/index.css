@@ -23,8 +23,28 @@ body {
 }
 
 h3 {
-	font-size: 1.33rem;
+	font-size: 1.25em;
 	line-height: 1.1;
+}
+
+button {
+	background: rgb(190, 190, 27);
+	margin-bottom: 10px;
+	padding: 10px 20px;
+	border-radius: 8px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+button:hover {
+	border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+	outline: 4px auto -webkit-focus-ring-color;
 }
 
 .acc-wrapper {
@@ -35,28 +55,19 @@ h3 {
 	gap: 20px;
 }
 
-.acc-wrapper button {
-	padding: 10px 20px;
-	background: #678d6b00;
-	color: #fff;
-	font-weight: bold;
-	font-size: 20px;
-	cursor: pointer;
-}
-
 .accordion {
 	width: 500px;
 }
 
 .item {
-	background: #8a6d34;
+	background: rgb(190, 190, 27);
 	margin-bottom: 10px;
 	padding: 10px 20px;
 	border-radius: 8px;
 }
 
 .title {
-	color: #ffffff;
+	color: #f7f2f2;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
