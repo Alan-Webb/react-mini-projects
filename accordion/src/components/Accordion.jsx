@@ -1,6 +1,6 @@
 import {useState} from "react";
 import data from "./data";
-import "./styles.css";
+import "/src/index.css";
 
 const Accordion = () => {
 	const [selected, setSelected] = useState(null);
@@ -17,7 +17,7 @@ const Accordion = () => {
 								onClick={() => handleSingleSelection(dataItem.id)}
 								className="title">
 								<h3>{dataItem.question}</h3>
-								<spam>+</spam>
+								<span>+</span>
 							</div>
 						</div>
 					))

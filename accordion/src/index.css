@@ -1,5 +1,5 @@
 :root {
-	font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+	font-family: Inter, system-ui, Helvetica, Arial, sans-serif;
 	line-height: 1.5;
 	font-weight: 400;
 
@@ -13,6 +13,15 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+body {
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+}
+
 a {
 	font-weight: 500;
 	color: #646cff;
@@ -21,14 +30,6 @@ a {
 
 a:hover {
 	color: #535bf2;
-}
-
-body {
-	margin: 0;
-	display: flex;
-	place-items: center;
-	min-width: 320px;
-	min-height: 100vh;
 }
 
 h1 {
@@ -59,8 +60,8 @@ button:focus-visible {
 
 .acc-wrapper {
 	display: flex;
-	height: 100vh;
-	width: 100vw;
+	/* height: 100vh;
+	width: 100vw; */
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -76,7 +77,7 @@ button:focus-visible {
 	cursor: pointer;
 }
 
-.accordian {
+.accordion {
 	width: 500px;
 }
 
@@ -84,6 +85,7 @@ button:focus-visible {
 	background: #614101;
 	margin-bottom: 10px;
 	padding: 10px 20px;
+	border-radius: 8px;
 }
 
 .title {
@@ -97,17 +99,4 @@ button:focus-visible {
 .acc-content {
 	color: #ffffff;
 	height: auto;
-}
-
-@media (prefers-color-scheme: light) {
-	:root {
-		color: #213547;
-		background-color: #ffffff;
-	}
-	a:hover {
-		color: #747bff;
-	}
-	button {
-		background-color: #f9f9f9;
-	}
 }
