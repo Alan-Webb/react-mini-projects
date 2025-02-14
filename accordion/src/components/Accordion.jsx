@@ -4,8 +4,10 @@ import data from "./data";
 const Accordion = () => {
 	const [selected, setSelected] = useState(null);
 
-	function handleSingleSelection(getCurrentId) {}
-
+	function handleSingleSelection(getCurrentId) {
+		setSelected(getCurrentId);
+	}
+	console.log(selected);
 	return (
 		<div className="acc-wrapper">
 			<div className="accordion">
@@ -18,6 +20,9 @@ const Accordion = () => {
 								<h3>{dataItem.question}</h3>
 								<span>+</span>
 							</div>
+							{selected === dataItem.id ? (
+								<div className="acc-content">{dataItem.answer}</div>
+							) : null}
 						</div>
 					))
 				) : (
