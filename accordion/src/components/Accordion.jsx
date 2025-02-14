@@ -1,6 +1,5 @@
 import {useState} from "react";
 import data from "./data";
-import "/src/index.css";
 
 const Accordion = () => {
 	const [selected, setSelected] = useState(null);

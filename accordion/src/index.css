@@ -60,8 +60,6 @@ button:focus-visible {
 
 .acc-wrapper {
 	display: flex;
-	/* height: 100vh;
-	width: 100vw; */
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
@@ -70,7 +68,7 @@ button:focus-visible {
 
 .acc-wrapper button {
 	padding: 10px 20px;
-	background: #614101;
+	background: #678d6b00;
 	color: #fff;
 	font-weight: bold;
 	font-size: 20px;
@@ -82,7 +80,7 @@ button:focus-visible {
 }
 
 .item {
-	background: #614101;
+	background: #8a6d34;
 	margin-bottom: 10px;
 	padding: 10px 20px;
 	border-radius: 8px;
