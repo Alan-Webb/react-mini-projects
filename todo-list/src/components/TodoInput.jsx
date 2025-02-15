@@ -2,7 +2,7 @@ const TodoInput = () => {
 	return (
 		<header>
 			<input placeholder="Enter todo..." />
-      <button>Add</button>
+			<button>Add</button>
 		</header>
 	);
 };
