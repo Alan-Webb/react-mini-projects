@@ -1,9 +1,5 @@
-import {useState} from "react";
-
-const TodoInput = (props) => {
-	const {handleAddTodos} = props;
-	const [todoValue, setTodoValue] = useState("");
-
+export default function TodoInput(props) {
+	const {handleAddTodos, todoValue, setTodoValue} = props;
 	return (
 		<header>
 			<input
@@ -22,6 +18,4 @@ const TodoInput = (props) => {
 			</button>
 		</header>
 	);
-};
-
-export default TodoInput;
+}

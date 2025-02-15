@@ -12,7 +12,7 @@ h3,
 input,
 button {
 	font-family: "Press Start 2P", system-ui;
-	margin-bottom: 2rem;
+	margin-bottom: 1.5rem;
 }
 
 body {
@@ -21,10 +21,9 @@ body {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	/* text-align: center; */
-	padding: 14px;
+	padding: 0.875rem;
 	background: #4b7ec2;
-	gap: 14px;
+	gap: 0.875rem;
 }
 
 header {
@@ -34,21 +33,21 @@ header {
 
 header,
 .main {
-	max-width: 800px;
+	max-width: 50rem;
 	width: 100%;
 	margin: 0 auto;
-	gap: 14px;
+	gap: 0.875rem;
 }
 
 header input {
 	flex: 1;
-	border-radius: 14px;
+	border-radius: 0.875rem;
 	outline: none;
 	width: 100%;
 }
 
 header button {
-	border-radius: 14px;
+	border-radius: 0.875rem;
 	background: transparent;
 	transition-duration: 200ms;
 	cursor: pointer;
@@ -60,39 +59,43 @@ header button:hover {
 
 header button,
 header input {
-	padding: 14px 18px;
+	padding: 0.875rem 1.125rem;
 	border: none;
 	outline: none;
 	background: white;
 }
 
 p {
-	font-size: 0.9em;
+	font-size: 0.9rem;
 }
 
 .main {
 	display: flex;
 	flex-direction: column;
-	gap: 14px;
+	gap: 0.875rem;
 }
 
 .todo-item {
 	display: flex;
 	align-items: center;
-	gap: 14px;
-	padding: 14px;
-	border-radius: 14px;
+	gap: 0.875rem;
+	padding: 0.875rem;
+	border-radius: 0.875rem;
 	background: white;
 }
 
 .todo-item p {
 	flex: 1;
+	font-family: system-ui;
+	font-weight: bold;
+	font-size: 1.55rem;
+	padding-left: 1.5rem;
 }
 
 .actions-container {
 	display: flex;
 	align-items: center;
-	gap: 14px;
+	gap: 0.875rem;
 }
 
 .actions-container button {
@@ -100,6 +103,8 @@ p {
 	border: none;
 	background: transparent;
 	cursor: pointer;
+	font-size: 1.55rem;
+	padding-top: 1rem;
 }
 
 .actions-container button:hover {
@@ -109,10 +114,10 @@ p {
 @media (min-width: 640px) {
 	header button,
 	header input {
-		font-size: 1.2em;
+		font-size: 1.2rem;
 	}
 
 	p {
-		font-size: 1em;
+		font-size: 1rem;
 	}
 }
