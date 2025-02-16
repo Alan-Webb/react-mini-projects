@@ -18,11 +18,9 @@
 	box-sizing: border-box;
 }
 
-body {
+#root {
 	min-height: 100vh;
 	display: flex;
-	align-items: center;
-	justify-content: center;
 	display: relative;
 }
 
@@ -103,7 +101,7 @@ footer button:hover {
 	position: absolute;
 	inset: 0;
 	background: #030615;
-	opacity: 0.6;
+	opacity: 0.5;
 }
 
 .sidebar-contents {
@@ -167,16 +165,6 @@ footer button:hover {
 	opacity: 0.2;
 	font-size: 3rem;
 	animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-	from {
-		transform: rotate(0deg);
-	}
-
-	to {
-		transform: rotate(360deg);
-	}
 }
 
 @media (min-width: 640px) {
