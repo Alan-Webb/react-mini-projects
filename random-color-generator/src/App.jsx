@@ -1,5 +1,11 @@
+import RandomColor from "./components/RandomColor";
+
 const App = () => {
-	return <div>App</div>;
+	return (
+		<div>
+			<RandomColor />
+		</div>
+	);
 };
 
 export default App;
