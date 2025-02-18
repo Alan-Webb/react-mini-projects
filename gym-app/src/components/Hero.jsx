@@ -9,15 +9,15 @@ export default function Hero() {
 				</h1>
 			</div>
 			<p className="text-sm md:text-base font-light text-center">
-				I hereby acknowledgement that I may become
+				I hereby acknowledge that I may become
 				<span className="text-blue-400 font-medium">
 					{" "}
 					unbelievably shredded
 				</span>{" "}
-				and accept all risks of becoming the total
+				and accept all risks of becoming a total
 				<span className="text-blue-400 font-medium"> mass monster</span>,
-				afflicted with being severely ripped, unable to fit through common doors
-				or fit into clothes that aren&apos;t XXXL.
+				afflicted with being severely ripped, and so unfathomably defined that I
+				look like an anatomy chart.
 			</p>
 			<button className="px-8 py-4 rounded-md border-[2px] border-blue-400 border-solid bg-slate-950 blue-shadow duration-200">
 				<p>accept and begin</p>
