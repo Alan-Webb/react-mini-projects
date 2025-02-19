@@ -27,6 +27,28 @@ export default function Generator() {
 		setShowModal(!showModal);
 	}
 
+	function updateMuscles(muscleGroup) {
+		if (muscles.includes(muscleGroup)) {
+			setMuscles(muscles.filter((val) => val !== muscleGroup));
+			return;
+		}
+
+		if (muscles.length > 2) {
+			return;
+		}
+
+		if (strategy !== "individual") {
+			setMuscles([muscleGroup]);
+			setShowModal(false);
+			return;
+		}
+
+		setMuscles([...muscles, muscleGroup]);
+		if (muscles.length === 2) {
+			setShowModal(false);
+		}
+	}
+
 	return (
 		<div className="min-h-screen">
 			<SectionWrapper
@@ -66,7 +88,30 @@ export default function Generator() {
 						<p>Muscle groups</p>
 						<i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
 					</button>
-					{showModal && <div className="flex flex-col px-3 pb-3">{}</div>}
+					{showModal && (
+						<div className="flex flex-col px-3 pb-3">
+							{(strategy === "individual"
+								? WORKOUTS[strategy]
+								: Object.keys(WORKOUTS[strategy])
+							).map((muscleGroup, muscleGroupIndex) => {
+								return (
+									<button
+										onClick={() => {
+											updateMuscles(muscleGroup);
+										}}
+										key={muscleGroupIndex}
+										className={
+											"hover:text-blue-400 duration-200 " +
+											(muscles.includes(muscleGroup) ? " text-blue-400" : " ")
+										}>
+										<p className="uppercase">
+											{muscleGroup.replaceAll("_", " ")}
+										</p>
+									</button>
+								);
+							})}
+						</div>
+					)}
 				</div>
 				<Header
 					index={"03"}
