@@ -1,6 +1,7 @@
 import {useState} from "react";
 import {SCHEMES, WORKOUTS} from "../utility/workout-data";
 import SectionWrapper from "./SectionWrapper";
+import Button from "./Button";
 
 function Header(props) {
 	const {index, title, description} = props;
@@ -64,6 +65,7 @@ export default function Generator() {
 						return (
 							<button
 								onClick={() => {
+									setMuscles([]);
 									setStrategy(type);
 								}}
 								className={
@@ -85,7 +87,9 @@ export default function Generator() {
 					<button
 						onClick={toggleModal}
 						className="relative flex p-3 items-center justify-center cursor-pointer">
-						<p>Muscle groups</p>
+						<p className="capitalize">
+							{muscles.length == 0 ? "Select muscle groups" : muscles.join(" ")}
+						</p>
 						<i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
 					</button>
 					{showModal && (
@@ -135,6 +139,7 @@ export default function Generator() {
 						);
 					})}
 				</div>
+				<Button text={"Formulate"}></Button>
 			</SectionWrapper>
 		</div>
 	);

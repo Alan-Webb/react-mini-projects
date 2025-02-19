@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 export default function Hero() {
 	return (
 		<div className="min-h-screen flex flex-col gap-10 items-center justify-center max-w-[800px] w-full mx-auto p-4">
@@ -19,9 +21,7 @@ export default function Hero() {
 				afflicted with being severely ripped, and so unfathomably defined that I
 				look like an anatomy chart.
 			</p>
-			<button className="px-8 py-4 rounded-md border-[2px] border-blue-400 border-solid bg-slate-950 blue-shadow duration-200">
-				<p>accept and begin</p>
-			</button>
+			<Button text={"Accept and Begin"}></Button>
 		</div>
 	);
 }
