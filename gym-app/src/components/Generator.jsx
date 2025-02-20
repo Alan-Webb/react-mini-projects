@@ -7,7 +7,7 @@ function Header(props) {
 	const {index, title, description} = props;
 	return (
 		<div className="flex flex-col gap-4">
-			<div className="flex items-center gap-2 justify-center">
+			<div className="flex items-center justify-center gap-2">
 				<p className="text-3xl sm:text-4xl md:text-5xl font-semibold text-slate-400">
 					{index}
 				</p>
@@ -18,11 +18,17 @@ function Header(props) {
 	);
 }
 
-export default function Generator() {
+export default function Generator(props) {
+	const {
+		strategy,
+		setStrategy,
+		muscles,
+		setMuscles,
+		goal,
+		setGoal,
+		updateWorkout,
+	} = props;
 	const [showModal, setShowModal] = useState(false);
-	const [strategy, setStrategy] = useState("individual");
-	const [muscles, setMuscles] = useState([]);
-	const [goal, setGoal] = useState("strength_power");
 
 	function toggleModal() {
 		setShowModal(!showModal);
@@ -69,7 +75,7 @@ export default function Generator() {
 									setStrategy(type);
 								}}
 								className={
-									"bg-slate-950 border duration-200 hover:border-blue-600 py-3 rounded-lg" +
+									"bg-slate-950 border duration-200 hover:border-blue-600 py-4 rounded-lg px-4" +
 									(type === strategy ? "" : "border-blue-400")
 								}
 								key={typeIndex}>
@@ -122,7 +128,7 @@ export default function Generator() {
 					title={"Become Juggernaut"}
 					description={"Select your ideal results"}
 				/>
-				<div className="grid grid-cols-3 gap-4">
+				<div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
 					{Object.keys(SCHEMES).map((scheme, schemeIndex) => {
 						return (
 							<button
@@ -130,7 +136,7 @@ export default function Generator() {
 									setGoal(scheme);
 								}}
 								className={
-									"bg-slate-950 border duration-200 hover:border-blue-600 py-3 rounded-lg" +
+									"bg-slate-950 border duration-200 hover:border-blue-600 py-4 rounded-lg px-4" +
 									(scheme === goal ? "" : "border-blue-400")
 								}
 								key={schemeIndex}>
@@ -139,7 +145,7 @@ export default function Generator() {
 						);
 					})}
 				</div>
-				<Button text={"Formulate"}></Button>
+				<Button func={updateWorkout} text={"Formulate"}></Button>
 			</SectionWrapper>
 		</div>
 	);
