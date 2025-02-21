@@ -1,8 +1,17 @@
 function App() {
 	return (
-		<div>
-			<h1 className="text-3xl font-bold underline">Cinephilopolis</h1>
-		</div>
+		<main>
+			<div className="pattern" />
+			<div className="wrapper">
+				<header>
+					<h1 className="uppercase">
+						Find the <span className="text-gradient">movies</span> you want at
+						<span className="text-gradient"> cinephilopolis</span>
+					</h1>
+				</header>
+        <p>Search</p>
+			</div>
+		</main>
 	);
 }
 
