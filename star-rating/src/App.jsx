@@ -1,11 +1,9 @@
 import StarRating from "./components/StarRating";
 
-const App = () => {
+export default function App() {
 	return (
 		<div>
 			<StarRating />
 		</div>
 	);
-};
-
-export default App;
+}
