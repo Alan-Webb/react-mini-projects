@@ -21,3 +21,11 @@ body {
 	min-width: 320px;
 	min-height: 100vh;
 }
+
+.active {
+	color: #fff700;
+}
+
+.inactive {
+	color: #000000;
+}
