@@ -1,10 +1,16 @@
+import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Dishes from "./components/Dishes";
+import About from "./components/About";
 
 const App = () => {
 	return (
-		<div>
+		<main className="overflow-y-hidden text-neutral-200 antialiased">
+			<Navbar />
 			<Hero />
-		</div>
+			<Dishes />
+			<About />
+		</main>
 	);
 };
 
