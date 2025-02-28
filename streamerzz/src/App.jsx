@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import KeyFeatures from "./components/KeyFeatures";
+import Pricing from "./components/Pricing";
 
 const App = () => {
 	return (
@@ -10,6 +11,7 @@ const App = () => {
 			<Hero />
 			<HowItWorks />
 			<KeyFeatures />
+			<Pricing />
 		</main>
 	);
 };
