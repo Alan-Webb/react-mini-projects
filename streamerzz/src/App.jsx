@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import HowItWorks from "./components/HowItWorks";
 import KeyFeatures from "./components/KeyFeatures";
 import Pricing from "./components/Pricing";
+import Testimonials from "./components/Testimonials";
 
 const App = () => {
 	return (
@@ -12,6 +13,7 @@ const App = () => {
 			<HowItWorks />
 			<KeyFeatures />
 			<Pricing />
+			<Testimonials />
 		</main>
 	);
 };
