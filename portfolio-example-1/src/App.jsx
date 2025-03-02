@@ -1,8 +1,10 @@
+import Navbar from "./components/Navbar";
+
 const App = () => {
 	return (
-		<div>
-			<h1 className="text-3xl font-bold underline">Hello world!</h1>
-		</div>
+		<main className="overflow-x-hidden bg-black tracking-tighter text-gray-200 antialiased">
+			<Navbar />
+		</main>
 	);
 };
 
