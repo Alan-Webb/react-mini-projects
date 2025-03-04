@@ -6,6 +6,7 @@ import Skills from "./components/Skills";
 import Award from "./components/Award";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const App = () => {
 	return (
@@ -18,6 +19,7 @@ const App = () => {
 			<Award />
 			<Testimonials />
 			<Contact />
+			<Footer />
 		</main>
 	);
 };
