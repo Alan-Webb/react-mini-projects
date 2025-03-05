@@ -1,4 +1,4 @@
-# VR landing page
+# Portfolio-example
 
 Landing page created follow tutorial found at https://www.youtube.com/watch?v=-TJ03nvX99c
 
