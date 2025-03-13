@@ -1,5 +1,6 @@
 import {motion} from "framer-motion";
 import {CONTACT_CONTENT} from "../constants";
+import {RiTwitterXLine, RiGithubFill, RiLinkedinFill} from "react-icons/ri";
 
 const textVariants = {
 	hidden: {opacity: 0, y: 20},
@@ -61,7 +62,43 @@ const Contact = () => {
 				initial="hidden"
 				whileInView="visible"
 				custom={0.8}
-				variants={textVariants}></motion.a>
+				variants={textVariants}>
+				{CONTACT_CONTENT.email}
+			</motion.a>
+
+			<div className="flex space-x-6 mt-8">
+				{CONTACT_CONTENT.socialLinks.map((link, index) => {
+					const Icon =
+						link.icon === "RiTwitterXLine"
+							? RiTwitterXLine
+							: link.icon === "RiGithubFill"
+							? RiGithubFill
+							: RiLinkedinFill;
+					return (
+						<motion.a
+							key={link.platform}
+							href={link.url}
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label={link.ariaLabel}
+							initial="hidden"
+							whileInView="visible"
+							custom={1.0 + index * 0.2}
+							variants={iconVariants}>
+							<Icon size={36} />
+						</motion.a>
+					);
+				})}
+			</div>
+
+			<motion.p
+				className="text-sm text-stone-400 mt-36"
+				initial="hidden"
+				whileInView="visible"
+				custom={1.6}
+				variants={textVariants}>
+				{CONTACT_CONTENT.footerText}
+			</motion.p>
 		</section>
 	);
 };
