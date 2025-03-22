@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {FaTimes} from "react-icons/fa";
 import {FaBars} from "react-icons/fa6";
+import {LINKS} from "../constants";
 
 const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +31,19 @@ const Navbar = () => {
 			</nav>
 			{isOpen && (
 				<div className="fixed inset-0 z-20 flex flex-col items-center justify-center bg-black text-white">
-          <ul>
-            
-          </ul>
-        </div>
+					<ul className="space-y-6 text-3xl">
+						{LINKS.map((link) => (
+							<li key={link.id}>
+								<a
+									href={`#${link.id}`}
+									onClick={toggleMenu}
+									className="text-5xl font-semibold uppercase tracking-wide hover:text-lime-300 lg:text-9xl">
+									{link.name}
+								</a>
+							</li>
+						))}
+					</ul>
+				</div>
 			)}
 		</>
 	);
