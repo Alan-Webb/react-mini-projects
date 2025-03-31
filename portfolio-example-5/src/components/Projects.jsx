@@ -1,4 +1,5 @@
 import {PROJECTS} from "../constants";
+import {MdArrowOutward} from "react-icons/md";
 
 const Projects = () => {
 	return (
@@ -21,7 +22,12 @@ const Projects = () => {
 								href={project.githubLink}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="rounded-full bg-white px-4 py-2 text-black hover:bg-gray-300"></a>
+								className="rounded-full bg-white px-4 py-2 text-black hover:bg-gray-300">
+								<div className="flex items-center">
+									<span>View in Github</span>
+									<MdArrowOutward />
+								</div>
+							</a>
 						</div>
 					</div>
 				))}
