@@ -1,7 +1,3 @@
-// 1. Div in div. Add id check to main div & pass in props.
-
-// 2. Create div wrapped h2, p & footer. Add span & ? checks to each.
-
 const Modal = ({id, header, body, footer}) => {
 	return (
 		<div

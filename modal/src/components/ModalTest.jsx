@@ -1,9 +1,3 @@
-// 1. Create btn, declare setShowModal, create toggle func & add to btn.
-
-// 2. Add && check below btn. Test popup, then create modal.
-
-// 3. Add custom props.
-
 import {useState} from "react";
 import Modal from "./Modal";
 
