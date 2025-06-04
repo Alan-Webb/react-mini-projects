@@ -1,14 +1,3 @@
-// 1. Div in div, input, btn. Create handleSubmit func, add to btn. Declare userName state & add value & onChange to input.
-
-// 2. Add async func & useEffect to call it. Clg data = get info.
-
-// 3. Declare userData & loading state, setLoading at start of async func & if check (below res.json). 
-// Add loading h1 if check.
-
-// 4. Create userCard.
-
-// 5. Add check below btn div. Add setUserName to if check. Add logic to handleSubmit func.
-
 import {useEffect, useState} from "react";
 import UserCard from "./UserCard";
 
@@ -18,17 +7,14 @@ const GithubProfileFinder = () => {
 	const [loading, setLoading] = useState(false);
 
 	async function fetchGithubUser() {
-		//Stage 3
 		setLoading(true);
 		const res = await fetch(`https://api.github.com/users/${userName}`);
 
 		const data = await res.json();
-		
-		// Stage 3
+
 		if (data) {
 			setUserData(data);
 			setLoading(false);
-			// Stage 5
 			setUserName("");
 		}
 		// console.log(data);
@@ -42,7 +28,6 @@ const GithubProfileFinder = () => {
 		fetchGithubUser();
 	}, []);
 
-	// Stage 3
 	if (loading) {
 		return <h1 className="text-center mt-40 text-4xl">Loading data...</h1>;
 	}
@@ -64,7 +49,6 @@ const GithubProfileFinder = () => {
 					Search
 				</button>
 			</div>
-			{/* Stage 4 check */}
 			{userData !== null ? <UserCard user={userData} /> : null}
 		</div>
 	);
