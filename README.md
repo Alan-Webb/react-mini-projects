@@ -5,6 +5,7 @@ Collection of mini-apps using React library
 ## Built with
 
 - React
+- TailwindCSS
 
 ## Author
 
