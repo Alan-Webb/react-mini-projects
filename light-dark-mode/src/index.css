@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+:root {
+	font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+	line-height: 1.5;
+	font-weight: 400;
+
+	--background: #fff;
+	--text-primary: #000;
+}
+
+[data-theme="dark"] {
+	--background: #000;
+	--text-primary: #fff;
+}
+
+.light-dark-mode {
+	background-color: var(--background);
+	color: var(--text-primary);
+	height: 100vh;
+}
