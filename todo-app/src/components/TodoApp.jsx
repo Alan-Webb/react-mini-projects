@@ -4,9 +4,16 @@ const TodoApp = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
 
-	const handleAddTask = () =>{
-
-	}
+	const handleAddTask = () => {
+		// console.log(inputValue);
+		const newTodo = {
+			id: Date.now(),
+			text: inputValue,
+		};
+		setTodos([newTodo, ...todos]);
+		setInputValue("");
+	};
+	// console.log(todos);
 
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
@@ -20,17 +27,18 @@ const TodoApp = () => {
 					onChange={(e) => setInputValue(e.target.value)}
 				/>
 				<button
-				onClick={handleAddTask}
-				className="border rounded-xl p-3 cursor-pointer	">
+					onClick={handleAddTask}
+					className="border rounded-xl p-3 cursor-pointer	">
 					Add Todo
 				</button>
 			</div>
-			<div>
-				Todo List
-				<div>Todo Item</div>
+			<div className="flex flex-col items-center mt-12 space-y-4">
+				{todos?.map((todo) => (
+					<div key={todo.id} className="border rounded-xl w-110 p-4">
+						<p>{todo.text}</p>
+					</div>
+				))}
 			</div>
 		</div>
 	);
 };
-
-export default TodoApp;
