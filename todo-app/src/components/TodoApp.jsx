@@ -1,3 +1,4 @@
+
 import {useState} from "react";
 
 const TodoApp = () => {
@@ -28,14 +29,19 @@ const TodoApp = () => {
 				/>
 				<button
 					onClick={handleAddTask}
-					className="border rounded-xl p-3 cursor-pointer	">
+					className="border rounded-xl p-3 cursor-pointer">
 					Add Todo
 				</button>
 			</div>
 			<div className="flex flex-col items-center mt-12 space-y-4">
 				{todos?.map((todo) => (
-					<div key={todo.id} className="border rounded-xl w-110 p-4">
-						<p>{todo.text}</p>
+					<div
+						key={todo.id}
+						className="border rounded-xl w-110 p-4 flex justify-between">
+						<p className="p-4">{todo.text}</p>
+						<button className="border rounded-xl p-3 cursor-pointer">
+							Delete
+						</button>
 					</div>
 				))}
 			</div>
