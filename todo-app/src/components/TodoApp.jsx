@@ -1,20 +1,4 @@
-
-import {useState} from "react";
-
-const TodoApp = () => {
-	const [inputValue, setInputValue] = useState("");
-	const [todos, setTodos] = useState([]);
-
-	const handleAddTask = () => {
-		// console.log(inputValue);
-		const newTodo = {
-			id: Date.now(),
-			text: inputValue,
-		};
-		setTodos([newTodo, ...todos]);
-		setInputValue("");
-	};
-	// console.log(todos);
+const handleDelete = () => {};
 
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
@@ -39,7 +23,9 @@ const TodoApp = () => {
 						key={todo.id}
 						className="border rounded-xl w-110 p-4 flex justify-between">
 						<p className="p-4">{todo.text}</p>
-						<button className="border rounded-xl p-3 cursor-pointer">
+						<button
+							onClick={() => handleDelete(todo?.id)}
+							className="border rounded-xl p-3 cursor-pointer">
 							Delete
 						</button>
 					</div>
@@ -50,3 +36,4 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
+
