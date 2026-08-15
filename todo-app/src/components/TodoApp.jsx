@@ -1,4 +1,22 @@
-const handleDelete = () => {};
+const TodoApp = () => {
+	const [inputValue, setInputValue] = useState("");
+	const [todos, setTodos] = useState([]);
+
+	const handleAddTask = () => {
+		// console.log(inputValue);
+		const newTodo = {
+			id: Date.now(),
+			text: inputValue,
+		};
+		setTodos([newTodo, ...todos]);
+		setInputValue("");
+	};
+	// console.log(todos);
+
+	const handleDelete = (id) => {
+		// console.log(id);
+		setTodos(todos?.filter((todo) => todo?.id !== id));
+	};
 
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
