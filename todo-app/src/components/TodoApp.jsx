@@ -1,3 +1,5 @@
+import {useState} from "react";
+
 const TodoApp = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
@@ -7,6 +9,7 @@ const TodoApp = () => {
 		const newTodo = {
 			id: Date.now(),
 			text: inputValue,
+			completed: false,
 		};
 		setTodos([newTodo, ...todos]);
 		setInputValue("");
@@ -16,6 +19,10 @@ const TodoApp = () => {
 	const handleDelete = (id) => {
 		// console.log(id);
 		setTodos(todos?.filter((todo) => todo?.id !== id));
+	};
+
+	const toggleTodo = (id) => {
+		console.log(id);
 	};
 
 	return (
@@ -39,8 +46,11 @@ const TodoApp = () => {
 				{todos?.map((todo) => (
 					<div
 						key={todo.id}
-						className="border rounded-xl w-110 p-4 flex justify-between">
-						<p className="p-4">{todo.text}</p>
+						className="border rounded-xl w-130 p-4 flex justify-between">
+						<div className="flex">
+							<input type="checkbox" onChange={() => toggleTodo(todo?.id)} />
+							<p className="p-4">{todo.text}</p>
+						</div>
 						<button
 							onClick={() => handleDelete(todo?.id)}
 							className="border rounded-xl p-3 cursor-pointer">
@@ -54,4 +64,3 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
-
