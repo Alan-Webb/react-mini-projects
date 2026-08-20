@@ -22,7 +22,12 @@ const TodoApp = () => {
 	};
 
 	const toggleTodo = (id) => {
-		console.log(id);
+		// console.log(id);
+		setTodos(
+			todos?.map((todo) =>
+				todo?.id === id ? {completed: !todo.completed, ...todo} : todo,
+			),
+		);
 	};
 
 	return (
