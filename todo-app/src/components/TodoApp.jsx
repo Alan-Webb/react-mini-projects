@@ -25,7 +25,7 @@ const TodoApp = () => {
 		// console.log(id);
 		setTodos(
 			todos?.map((todo) =>
-				todo?.id === id ? {completed: !todo.completed, ...todo} : todo,
+				todo?.id === id ? {...todo, completed: !todo.completed} : todo,
 			),
 		);
 	};
@@ -51,7 +51,7 @@ const TodoApp = () => {
 				{todos?.map((todo) => (
 					<div
 						key={todo.id}
-						className="border rounded-xl w-130 p-4 flex justify-between">
+						className={`border rounded-xl w-130 p-4 flex justify-between ${todo.completed ? "line-through" : ""}`}>
 						<div className="flex">
 							<input type="checkbox" onChange={() => toggleTodo(todo?.id)} />
 							<p className="p-4">{todo.text}</p>
@@ -69,3 +69,4 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
+
