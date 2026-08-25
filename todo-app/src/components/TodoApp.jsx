@@ -47,6 +47,19 @@ const TodoApp = () => {
 					Add Todo
 				</button>
 			</div>
+			{/* Filter Buttons */}
+			<div className="flex space-x-3 mt-6">
+				<button className="border w-40 rounded-xl p-4 cursor-pointer">
+					All
+				</button>
+				<button className="border w-40 rounded-xl p-4 cursor-pointer">
+					Pending
+				</button>
+				<button className="border w-40  rounded-xl p-4 cursor-pointer">
+					Completed
+				</button>
+			</div>
+			{/* Todo Render */}
 			<div className="flex flex-col items-center mt-12 space-y-4">
 				{todos?.map((todo) => (
 					<div
