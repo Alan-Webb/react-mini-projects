@@ -3,6 +3,7 @@ import {useState} from "react";
 const TodoApp = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
+	const [filter, setFilter] = useState("all");
 
 	const handleAddTask = () => {
 		// console.log(inputValue);
@@ -30,6 +31,8 @@ const TodoApp = () => {
 		);
 	};
 
+	console.log(filter);
+
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
 			<div className="flex space-x-3">
@@ -49,13 +52,19 @@ const TodoApp = () => {
 			</div>
 			{/* Filter Buttons */}
 			<div className="flex space-x-3 mt-6">
-				<button className="border w-40 rounded-xl p-4 cursor-pointer">
+				<button
+					onClick={() => setFilter("all")}
+					className="border w-40 rounded-xl p-4 cursor-pointer">
 					All
 				</button>
-				<button className="border w-40 rounded-xl p-4 cursor-pointer">
+				<button
+					onClick={() => setFilter("pending")}
+					className="border w-40 rounded-xl p-4 cursor-pointer">
 					Pending
 				</button>
-				<button className="border w-40  rounded-xl p-4 cursor-pointer">
+				<button
+					onClick={() => setFilter("completed")}
+					className="border w-40  rounded-xl p-4 cursor-pointer">
 					Completed
 				</button>
 			</div>
@@ -82,4 +91,3 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
-
