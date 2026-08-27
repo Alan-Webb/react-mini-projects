@@ -31,7 +31,7 @@ const TodoApp = () => {
 		);
 	};
 
-	console.log(filter);
+	// console.log(filter);
 
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
@@ -54,17 +54,17 @@ const TodoApp = () => {
 			<div className="flex space-x-3 mt-6">
 				<button
 					onClick={() => setFilter("all")}
-					className="border w-40 rounded-xl p-4 cursor-pointer">
+					className={`border rounded-xl p-4 cursor-pointer ${filter === "all" ? "bg-red-800" : ""}`}>
 					All
 				</button>
 				<button
 					onClick={() => setFilter("pending")}
-					className="border w-40 rounded-xl p-4 cursor-pointer">
+					className={`border rounded-xl p-4 cursor-pointer ${filter === "pending" ? "bg-red-800" : ""}`}>
 					Pending
 				</button>
 				<button
 					onClick={() => setFilter("completed")}
-					className="border w-40  rounded-xl p-4 cursor-pointer">
+					className={`border rounded-xl p-4 cursor-pointer ${filter === "completed" ? "bg-red-800" : ""}`}>
 					Completed
 				</button>
 			</div>
