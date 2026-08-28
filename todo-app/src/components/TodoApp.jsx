@@ -32,6 +32,11 @@ const TodoApp = () => {
 	};
 
 	// console.log(filter);
+	const filteredTodos = todos?.filter((todo) => {
+		if (filter === "pending") return !todo.completed;
+		if (filter === "completed") return todo.completed;
+		return todo;
+	});
 
 	return (
 		<div className="flex flex-col items-center text-2xl mt-12">
@@ -70,13 +75,19 @@ const TodoApp = () => {
 			</div>
 			{/* Todo Render */}
 			<div className="flex flex-col items-center mt-12 space-y-4">
-				{todos?.map((todo) => (
+				{filteredTodos?.map((todo) => (
 					<div
 						key={todo.id}
-						className={`border rounded-xl w-130 p-4 flex justify-between ${todo.completed ? "line-through" : ""}`}>
+						className="border rounded-xl w-130 p-4 flex justify-between">
 						<div className="flex">
-							<input type="checkbox" onChange={() => toggleTodo(todo?.id)} />
-							<p className="p-4">{todo.text}</p>
+							<input
+								type="checkbox"
+								onChange={() => toggleTodo(todo?.id)}
+								className="cursor-pointer"
+							/>
+							<p className={`p-4 ${todo.completed ? "line-through" : ""}`}>
+								{todo.text}
+							</p>
 						</div>
 						<button
 							onClick={() => handleDelete(todo?.id)}
