@@ -1,9 +1,11 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 const TodoApp = () => {
 	const [inputValue, setInputValue] = useState("");
 	const [todos, setTodos] = useState([]);
 	const [filter, setFilter] = useState("all");
+
+	useEffect(() => {}, []);
 
 	const handleAddTask = () => {
 		// console.log(inputValue);
@@ -102,3 +104,4 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
+
