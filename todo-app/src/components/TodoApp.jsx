@@ -5,7 +5,7 @@ const TodoApp = () => {
 	const [todos, setTodos] = useState([]);
 	const [filter, setFilter] = useState("all");
 
-	useEffect(() => {}, []);
+	useEffect(() => {}, [todos]);
 
 	const handleAddTask = () => {
 		// console.log(inputValue);
