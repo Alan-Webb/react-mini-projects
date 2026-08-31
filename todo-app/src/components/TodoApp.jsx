@@ -2,10 +2,15 @@ import {useEffect, useState} from "react";
 
 const TodoApp = () => {
 	const [inputValue, setInputValue] = useState("");
-	const [todos, setTodos] = useState([]);
+	const [todos, setTodos] = useState(() => {
+		const savedTodos = localStorage.getItem("todo-data");
+		return savedTodos ? JSON.parse(savedTodos) : [];
+	});
 	const [filter, setFilter] = useState("all");
 
-	useEffect(() => {}, [todos]);
+	useEffect(() => {
+		localStorage.setItem("todo-data", JSON.stringify(todos));
+	}, [todos]);
 
 	const handleAddTask = () => {
 		// console.log(inputValue);
@@ -84,6 +89,7 @@ const TodoApp = () => {
 						<div className="flex">
 							<input
 								type="checkbox"
+								checked={todo.completed}
 								onChange={() => toggleTodo(todo?.id)}
 								className="cursor-pointer"
 							/>
@@ -104,4 +110,3 @@ const TodoApp = () => {
 };
 
 export default TodoApp;
-
